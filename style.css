@@ -19,13 +19,15 @@ html {
 body {
 	display: flex;
 	flex-direction: row;
+	border: 0;
 	margin: 0;
-	padding: 0;
+	width: 100vw;
+	height: 100vh;
 }
 
 a,
 a:visited {
-	text-decoration: none;
+	text-decoration: underline;
 	color: var(--main-color);
 }
 
@@ -33,36 +35,26 @@ a:hover {
 	color: var(--secondary-color);
 }
 
-.left-image {
+.container-left {
+	position: relative;
+	height: 100vh;
+	width: 35vw;
 	background-image: url(./backdrop.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 100vh;
-	width: 35vw;
 	display: flex;
 	justify-content: center;
-	/* align-items: center; */
 	flex-direction: column;
-	position: relative;
 }
 
-.left-background {
+.title-left {
 	background-color: rgba(248, 249, 250, 0.95);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-}
-
-.logo {
-	width: 50px;
-	height: 50px;
-}
-
-.left-title {
 	color: var(--main-color);
+	padding: 2rem 0;
+	text-align: center;
 	font-weight: 700;
 	text-transform: capitalize;
+	cursor: default;
 }
 
 .credits {
@@ -70,4 +62,9 @@ a:hover {
 	align-self: center;
 	position: absolute;
 	bottom: 0;
+}
+
+.container-right {
+	height: 100vh;
+	width: 65vw;
 }
